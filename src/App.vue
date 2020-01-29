@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Interface msg="Welcome to Your Vue.js App"/>
+    <Canvas msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Canvas from './components/Canvas.vue';
+import Interface from './components/Interface.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Canvas,
+    Interface
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+body, #app {
+  margin: 0;
+  height:100vh;
+  width:100vw;
+  font-family: 'Patrick Hand', cursive;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0; 
+  display: flex;
+  justify-content: flex-start;
 }
 </style>
