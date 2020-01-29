@@ -20,7 +20,7 @@
 		<p>Name</p>
 		<input type="text" name="name" placeholder="Sam" @input="chooseName" maxlength="40">
 		<br>
-		<label for="name" >{{currentErr}}</label>
+		<label style="color:red;" for="name" >{{currentErr}}</label>
 		</div>
 
 		<div>
@@ -61,7 +61,7 @@ export default {
 		chooseName (e) {
 			console.log(e.target.value.length);
 			err = false
-			if (e.target.value.length >= 40) {
+			if (e.target.value.length >= 20) {
 				this.currentErr = "Name is too long."
 				err = true
 			}
@@ -103,11 +103,17 @@ export default {
 #interface {
 	height: 100vh;
 	width: 400px;
-	background: #6ad6cd;
+	background: #FFFFFF;
 }
 
 #interface p {
 	margin:0;
+	font-size: 1.3em;
+}
+
+#interface select, input {
+	width:95%;
+	height:30px;
 }
 
 #ui-container {
@@ -115,6 +121,6 @@ export default {
 }
 
 #ui-container > div {
-	padding:10px;
+	padding:15px;
 }
 </style>
